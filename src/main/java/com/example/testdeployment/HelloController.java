@@ -10,6 +10,6 @@ public class HelloController {
     private String email;
     @GetMapping
     public String hello(){
-        return email;
+        return "admin_9000000000000000000";
     }
 }
