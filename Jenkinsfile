@@ -11,7 +11,7 @@ pipeline {
   stage('Stage 2') {
       steps {
         script {
-          sh 'mvn clean install -f jenkins/pom.xml'
+          sh 'mvn clean install -f jenkin_pipe/pom.xml'
         }
       }
     }
