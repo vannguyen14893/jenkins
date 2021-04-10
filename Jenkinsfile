@@ -1,15 +1,14 @@
-
 pipeline {
-agent any
- stages {
-     stage('Clone') {
-     echo "Clone success"
+    agent any
+    stages {
+         stage('Clone') {
+
      }
-      stage('Build') {
-      echo "Build success"
-      }
-      stage('Test') {
-       echo "Test success"
+         stage('Build') {
+
+     }
+         stage('Test') {
+
         }
      }
 }
