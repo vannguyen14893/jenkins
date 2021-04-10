@@ -4,7 +4,7 @@ pipeline {
   stage('Stage 1') {
       steps {
         script {
-          git url: 'https://github.com/jfrogdev/project-examples.git'
+          git url: 'https://github.com/vannguyen14893/jenkins.git'
         }
       }
     }
