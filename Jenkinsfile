@@ -1,6 +1,5 @@
 
 pipeline {
-    agent any
    node {
        stage('Clone') {
            git url: 'https://github.com/vannguyen14893/jenkins.git'
