@@ -1,9 +1,15 @@
 
-node {
-       stage('Clone') {
-           git url: 'https://github.com/vannguyen14893/jenkins.git'
-       }
-       stage('Build') {
-             'mvn clean install -f jenkins/pom.xml'
-       }
+pipeline {
+agent any
+ stages {
+     stage('Clone') {
+     echo "Clone success"
+     }
+      stage('Build') {
+      echo "Build success"
+      }
+      stage('Test') {
+       echo "Test success"
+        }
+     }
 }
