@@ -9,6 +9,6 @@ pipeline {
      }
          stage('Test') {
 
-        }
      }
+    }
 }
