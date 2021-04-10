@@ -4,6 +4,6 @@ node {
            git url: 'https://github.com/vannguyen14893/jenkins.git'
        }
        stage('Build') {
-            'mvn clean install'
+            sh 'mvn clean install -f jenkins/pom.xml'
        }
 }
