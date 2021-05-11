@@ -1,19 +1,15 @@
-pipeline {
-  agent any
-  stages {
-  stage('Stage 1') {
-      steps {
-        script {
-          git url: 'https://github.com/vannguyen14893/jenkins.git'
-        }
-      }
-    }
-  stage('Stage 2') {
-      steps {
-        script {
-           cmd 'mvn clean install -f jenkin_pipe/pom.xml'
-        }
-      }
-    }
+  pipeline {
+    agent {
+       docker {
+            image 'maven:3.8.1-adoptopenjdk-11'
+            args '-v /root/.m2:/root/.m2'
+               }
+          }
+    stages {
+          stage('Build') {
+              steps {
+                sh 'mvn -B -DskipTests clean package'
+                     }
+                         }
+            }
   }
-}
